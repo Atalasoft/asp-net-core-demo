@@ -31,7 +31,7 @@ namespace WebDocumentViewerCors.Bower
                     // This address can be found in Properties/launchSettings.json.
                     // Comment this line, to disable CORS support for this origin, so your browser
                     // will show an error in its console about it.
-                    .WithOrigins("http://localhost:37510")
+                    .WithOrigins("http://localhost:37510", "http://localhost:37509")
                     // For this demo we allow any header, but you can setup your own and specific headers
                     .AllowAnyHeader() 
                     // For this demo we allow any method, however you can use more strict conditions
