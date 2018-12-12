@@ -16,10 +16,6 @@ const dependencies = [
         dest: "jquery"
     },
     {
-        src: ["jquery.easing/jquery.easing.js", "jquery.easing/jquery.easing.min.js"],
-        dest: "jquery-easing"
-    },
-    {
         src: ["jquery-ui-dist/jquery-ui.js", "jquery-ui-dist/jquery-ui.min.js"],
         dest: "jquery-ui"
     },
@@ -44,7 +40,7 @@ const dependencies = [
         dest: "web-document-viewer/images"
     },
     {
-        src: ["web-capture-service/*.js", "web-capture-service/*.msi"],
+        src: ["web-capture-service/*.js", "web-capture-service/*.msi", "web-capture-service/*.pkg"],
         dest: "web-capture-service"
     }
 ];

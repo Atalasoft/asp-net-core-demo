@@ -2,7 +2,7 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
-    "web-capture-service": "11.0.10",
-    "web-document-viewer": "11.0.10"
+    "web-capture-service": "11.1.0",
+    "web-document-viewer": "11.1.0"
   }
 }

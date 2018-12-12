@@ -5,6 +5,7 @@
     <script src="lib/jquery/jquery.min.js" type="text/javascript"></script>
     <script src="lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
     <script src="lib/raphael/raphael.min.js"></script>
+    <script src="lib/clipboard/clipboard.min.js" type="text/javascript"></script>
     <script src="lib/web-document-viewer/atalaWebDocumentViewer.js" type="text/javascript"></script>
 
     <!-- Script for Web Capture -->
@@ -57,7 +58,7 @@
                         // When we start a new scan, we want to make this count zeroed out so that we get an accurate count
                         _scanCount = 0;
                     },
-                    onImageAcquired: function(index, image) {
+                    onImageAcquired: function (index, image) {
                         // this just increments the count each time an image is aqcuired..
                         // this is how we will know how many pages were scanned so we can properly
                         // insert later
@@ -70,7 +71,7 @@
                         Atalasoft.Controls.Capture.WebScanning.LocalFile.asBase64String(image.localFile,
                             'tif',
                             null,
-                            function(data) {
+                            function (data) {
                                 Atalasoft.Controls.Capture.UploadToCaptureServer.uploadToServer(data);
                             });
                     },
@@ -122,7 +123,7 @@
         /// https://atalasoft.github.io/web-capture-service/Atalasoft.Controls.Capture.html#.Errors
         ///
         function scanErrorHandler(msg, params) {
-            var installerUrl;
+            var installerUrl = window.location.protocol + "//" + window.location.host + "/lib/web-capture-service/";
             switch (msg) {
                 case Atalasoft.Controls.Capture.Errors.noTwain:
                     alert("This web capture application requires that you have at least one valid TWAIN device installed and configured. Please ensure you install the TWAIN driver for your scanner device(s) then re-visit this site.");
@@ -134,7 +135,7 @@
                     alert("The Kofax WebCapture Service on the multiuser system you're using is not running. Please contact your system administrator.");
                     break;
                 case Atalasoft.Controls.Capture.Errors.noPlugin:
-                    installerUrl = window.location.protocol + "//" + window.location.host + "/Scripts/" + params.filename;
+                    installerUrl = installerUrl + params.filename;
                     window.open(installerUrl, '_downloadService');
                     alert(
                         "The WingScan Web Scanning service is not available. \n\n" +
@@ -144,10 +145,10 @@
                         "Refresh your browser when completed.");
                     break;
                 case Atalasoft.Controls.Capture.Errors.oldPlugin:
-                    installerUrl = window.location.protocol + "//" + window.location.host + "/WebCapture/" + params.filename;
+                    installerUrl = installerUrl + params.filename;
                     window.open(installerUrl, '_downloadService');
                     alert(
-                        "The WingScan Web Scanning service is out of date.<br />" +
+                        "The WingScan Web Scanning service is out of date.\n\n" +
                         "If the download does not begin automatically, please go to " +
                         params.filename);
                     break;
