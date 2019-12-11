@@ -20,6 +20,6 @@ To run the demo locally, you need to have DotImage license. There are various wa
 ## Related Articles
 
 - [Introducing NuGet Packages](http://atalasoft.github.io/2016/05/03/introducing-nuget/)
-- [Tutorial: How to create Web Document Viewer demo application](https://atalasoft.github.io/web-document-viewer/tutorial-demo-application-aspnet-core.html) 
+- [Tutorial: How to create Web Document Viewer demo application](https://atalasoft.github.io/web-document-viewer/tutorial-1-2-demo-application-aspnet-core.html) 
 - [Tutorial: How to create Web Capture Service demo application](https://atalasoft.github.io/web-capture-service/tutorial-2-5-demo-application-aspnet-core.html) 
  
