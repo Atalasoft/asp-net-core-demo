@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Style for Web Viewer -->
+    <link href="lib/jquery-ui/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="lib/web-document-viewer/atalaWebDocumentViewer.css" rel="stylesheet" />
+
+    <!-- data-main attribute tells require.js to load app.js after require.js loads. -->
+    <script data-main="app" src="lib/requirejs/require.js" defer="defer"></script>
+</head>
+<body>
+    <h1>Kofax Web Document Viewer Demo</h1>
+    <form id="WDVForm" runat="server">
+        Select File to display:
+
+        <select ID="FileSelectionList">
+            <option value="images/Test.tif">Test.tif</option>
+            <option value="images/Test.pdf">Test.pdf</option>
+        </select>
+
+        <div>
+            <div class="atala-document-toolbar" style="width: 800px;"></div>
+            <div class="atala-document-container" style="width: 800px; height: 600px;"></div>
+        </div>
+
+        <div id="status"></div>
+
+    </form>
+</body>
+</html>
